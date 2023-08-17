@@ -47,7 +47,7 @@ func main() {
 
 	go func() {
 		// consome apicep
-		url := fmt.Sprintf("https://cdn.apicep.com/file/apicep/%s.json", cep)
+		url := fmt.Sprintf("https://cdn.apicep.com/file/apicep/%s-%s.json", cep[:5] ,cep[5:])
 		
 		body,err := ConsomeCEP(url)
 		if err != nil {
